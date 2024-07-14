@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+$main-color: #C98A40;
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 900
+    $font-family: "Vollkorn", serif;
+    $font-style: normal;
+  
+.bg-main {
+    background-color: $main-color !important;
+  }
+
+  .higeht{
+    height: 100vh;
+  }
+  .btn-yollow{
+    background-color: yellow;
+    border-radius: 30%;
+    padding: 10px;
+    
+}
+
