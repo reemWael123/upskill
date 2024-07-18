@@ -1,26 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
-$main-color: #C98A40;
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 400 to 900
-    $font-family: "Vollkorn", serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+$font-family:  "Sen", sans-serif;;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap');
+$font-family2:"Poppins", sans-serif;
 
 .titel2{
     font-family: $font-family;
     color:#FFFFFF;
-    font-size: 100px;
+    font-size: 130px;
     font-weight: 800;
     width:60%;
-    padding-left: 30px;
+    
   
 
   }
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
-    $font-family2: "Poppins", sans-serif;
-
+ 
   .caption{
     font-family: $font-family2;
 font-size: 10px;
 // width: 277px;
 height:100px !important;
-margin: 30px;
+
+color:  #FFFFFF;
+;
  }

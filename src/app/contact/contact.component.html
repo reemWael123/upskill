@@ -7,33 +7,52 @@
         </h1>
         <div class="row">
            <div class="col-md-6">
-             <form  [formGroup]="regesterform" (ngSubmit)="handelbtn()" class="rounded-5  w-75 mx-auto bg-light-main p-3">
+             <form  [formGroup]="regesterforms" (ngSubmit)="handelbtn()" class="rounded-5  w-75 mx-auto bg-light-main p-3">
     
             <div class="form-item">
                 
-                <input formControlName="name" class="form-control bg-main rounded-5" type="text" id="name" placeholder="full name">
+                <input formControlName="name" class="form-control mt-1 rounded-5" type="text" id="name" placeholder="full name">
+           
+                <div *ngIf="regesterforms.get('name')?.touched&&regesterforms.get('name')?.errors"              class="alert alert-danger" >
+                    <p *ngIf="regesterforms.get('name')?.getError('required')">name is required</p>
+                    <p *ngIf="regesterforms.get('name')?.getError('minlength')">name minlength is 3</p>
+                    <p *ngIf="regesterforms.get('name')?.getError('maxlength')">name maxlength is 10 </p>
+        
+                  </div>
             </div>
             <div class="form-item">
                 
-                <input formControlName="email" class="form-control bg-main rounded-5  " type="email" id="email" placeholder="email">
+                <input formControlName="email" class="form-control mt-1 rounded-5  " type="email" id="email" placeholder="email">
+           
+                <div *ngIf="regesterforms.get('email')?.touched&&regesterforms.get('email')?.errors"    class="alert alert-danger" >
+                    <p *ngIf="regesterforms.get('email')?.getError('required')">email is required</p>
+                    <p *ngIf="regesterforms.get('email')?.getError('email')">email invalid format</p>
+                    
+                  </div>
             </div>
           
         
             <div class="form-item">
 
-                <input formControlName="phone" class="form-control bg-main rounded-5" type="tel" id="phone" placeholder="phone">
+                <input formControlName="phone" class="form-control mt-1 rounded-5" type="tel" id="phone" placeholder="phone">
               
-            
+                <div *ngIf="regesterforms.get('phone')?.touched&&regesterforms.get('phone')?.errors"    class="alert alert-danger" >
+                    <p *ngIf="regesterforms.get('phone')?.getError('required')">phone is required</p>
+                    <p *ngIf="regesterforms.get('phone')?.getError('pattern')">accepted only eygpt number</p>
+                     
+                  </div>
             </div>
            
         <div class="d-flex justify-content-center">
-            <button  type="submit" class="btn  m-1 send-btn"> send</button>
+            <button   [disabled]="regesterforms.invalid"  type="submit" class="btn  m-1 send-btn"> send</button>
+            <p class="alert alert-danger" *ngIf="erroMsg">{{erroMsg}} </p>
+        
         </div>
         </form>
     </div>
     <div class="col-md-6">
 
-        <p class="cont ">  <img src="./assets/images/ic_round-mail.png" >  upskilling.eg1@gmail.com</p>
+        <p class="cont pt-5 ">  <img src="./assets/images/ic_round-mail.png" >  upskilling.eg1@gmail.com</p>
         <p class="cont"><img src="./assets/images/ic_round-call.png">+20 115 493 2137</p>
     </div>
         </div>

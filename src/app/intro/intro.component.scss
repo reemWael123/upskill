@@ -1,6 +1,11 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
-$font-family: "Vollkorn", serif;
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+$font-family:  "Sen", sans-serif;;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap');
+$font-family2:"Poppins", sans-serif;
 $whit-color:#FFFFFF;
 .text{
 width: 248px;
@@ -13,22 +18,21 @@ color:#FFFFFF;
 margin-bottom: 100px
 ;
 }
-h1{
-    font-family:$font-family;  
-    font-weight: 700;
-     font-size:74px;
-     color:#FFFFFF;
-     height: 80px;
-}
+
 img{
     width: 100%;
 }
 .col-md-6 h1 {
     display: inline;
-    white-space: nowrap;
+    font-family:$font-family;  
+    font-weight: 700;
+     font-size:74px;
+     color:#FFFFFF;
+     height: 80px;
     
 }
 .p2{
+    font-family: $font-family2;
     color: $whit-color;
     font-size: 18px;
 }
